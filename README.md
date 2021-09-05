@@ -1,62 +1,47 @@
-# :package_description
+# Editor.js blocks themeable parser for Laravel
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/run-tests?label=tests)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/vendor_slug/package_slug/Check%20&%20fix%20styling?label=code%20style)](https://github.com/vendor_slug/package_slug/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/vendor_slug/package_slug.svg?style=flat-square)](https://packagist.org/packages/vendor_slug/package_slug)
-
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
-
-1. Press the "Use template" button at the top of this repo to create a new repo with the contents of this skeleton
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files
-3. Remove this block of text.
-4. Have fun creating your package.
-5. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/dontfreakout/laravel-editorjs-to-html.svg?style=flat-square)](https://packagist.org/packages/dontfreakout/laravel-editorjs-to-html)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/dontfreakout/laravel-editorjs-to-html/run-tests?label=tests)](https://github.com/dontfreakout/laravel-editorjs-to-html/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/dontfreakout/laravel-editorjs-to-html/Check%20&%20fix%20styling?label=code%20style)](https://github.com/dontfreakout/laravel-editorjs-to-html/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/dontfreakout/laravel-editorjs-to-html.svg?style=flat-square)](https://packagist.org/packages/dontfreakout/laravel-editorjs-to-html)
 
 This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require vendor_slug/package_slug
+composer require dontfreakout/laravel-editorjs-to-html
 ```
 
-You can publish and run the migrations with:
+[comment]: <> (You can publish and run the migrations with:)
 
-```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag="package_slug-migrations"
-php artisan migrate
-```
+[comment]: <> (```bash)
+
+[comment]: <> (php artisan vendor:publish --provider="Dontfreakout\LaravelEditorjsToHtml\LaravelEditorjsToHtmlServiceProvider" --tag="laravel-editorjs-to-html-migrations")
+
+[comment]: <> (php artisan migrate)
+
+[comment]: <> (```)
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="VendorName\Skeleton\SkeletonServiceProvider" --tag="package_slug-config"
+php artisan vendor:publish --provider="Dontfreakout\LaravelEditorjsToHtml\LaravelEditorjsToHtmlServiceProvider" --tag="laravel-editorjs-to-html-config"
 ```
 
 This is the contents of the published config file:
 
 ```php
 return [
+    'default-template' => 'default'
 ];
 ```
 
 ## Usage
-
-```php
-$skeleton = new VendorName\Skeleton();
-echo $skeleton->echoPhrase('Hello, Spatie!');
+Package provides custom blade component to render Editor.js block JSON 
+```blade
+<x-dfk::editor-to-html :editor-data="$editorjsJson" template="tailwind" />
 ```
 
 ## Testing
@@ -79,7 +64,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Dontfreakout (Martin Vlček)](https://github.com/dontfreakout)
 - [All Contributors](../../contributors)
 
 ## License

@@ -1,2 +1,2 @@
 providers:
-  - VendorName\Skeleton\SkeletonServiceProvider
+  - Dontfreakout\LaravelEditorjsToHtml\LaravelEditorjsToHtmlServiceProvider

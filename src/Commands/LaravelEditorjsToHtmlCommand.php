@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace Dontfreakout\LaravelEditorjsToHtml\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class LaravelEditorjsToHtmlCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'laravel-editorjs-to-html';
 
     public $description = 'My command';
 
