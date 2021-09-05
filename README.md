@@ -41,7 +41,7 @@ return [
 ## Usage
 Package provides custom blade component to render Editor.js block JSON 
 ```blade
-<x-dfk::editor-to-html :editor-data="$editorjsJson" template="tailwind" />
+<x-dfk-editor-to-html :editor-data="$editorjsJson" template="tailwind" />
 ```
 
 ## Testing
